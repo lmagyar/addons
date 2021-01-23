@@ -2,7 +2,7 @@
 # ==============================================================================
 # Start MariaDB service if enabled
 # ==============================================================================
-MARIADB_DATA=/data/databases
+MARIADB_DATA=/tmp/databases
 NEW_INSTALL=false
 
 # Init mariadb
