@@ -1,5 +1,5 @@
 {
-  "name": "MariaDB",
+  "name": "MariaDB [inmemory]",
   "version": "2.2.1-inmemory.1",
   "slug": "mariadb",
   "description": "An SQL database server",
