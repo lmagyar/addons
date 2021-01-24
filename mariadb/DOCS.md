@@ -1,5 +1,20 @@
 # Home Assistant Add-on: MariaDB
 
+```
+vvvvvvvv WARNING vvvvvvvv
+```
+> This is a fork of the official add-on!
+>
+> This version uses tmpfs to store MariaDB database in-memory. The Memory storage engine is not suitable, because that [can't handle TEXT columns](https://mariadb.com/kb/en/memory-storage-engine/) in the recorder [database](https://www.home-assistant.io/docs/backend/database/#schema).
+>
+> The size of the tmpfs is hardcoded in the HA/Docker configuration file, can't be set from the add-on's configuration. Currently it is **200MB**.
+>
+> If you use the built-in SQLite with ```db_url: 'sqlite:///:memory:'``` recorder configuration and fed up with the uncountable ```sqlite3.OperationalError: cannot commit - no transaction is active``` errors in your HA log, give this add-on a try.
+
+```
+^^^^^^^^ WARNING ^^^^^^^^
+```
+
 ## Installation
 
 Follow these steps to get the add-on installed on your system:
