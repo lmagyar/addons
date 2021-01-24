@@ -9,6 +9,7 @@
   "boot": "auto",
   "init": false,
   "timeout": 20,
+  "tmpfs": "size=200m",
   "services": ["mysql:provide"],
   "ports": {
     "3306/tcp": null
